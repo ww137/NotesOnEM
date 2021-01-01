@@ -1,0 +1,61 @@
+\documentclass[
+    ebook,
+    11pt,
+    twoside,
+    onecolumn,
+    openright,
+    % final
+    draft
+]{memoir}
+
+\usepackage[]{geometry}
+% \usepackage[final]{microtype}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\graphicspath{ {./figures} }
+
+\usepackage{natbib}
+
+\usepackage{kotex}
+\usepackage{lipsum}
+
+\usepackage{hyperref}
+\hypersetup{%
+    unicode=true,
+    colorlinks=false
+}
+
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{titlingpage}
+    \title{\HUGE\textbf{Notes on Electromagnetism}}
+    \author{\Large\textbf{Nanaki}}
+    \date{\Large{\today}}
+
+    \pagenumbering{Alph}
+    \maketitle
+    \includegraphics{cover.pdf}
+\end{titlingpage}
+
+\frontmatter
+
+\tableofcontents
+% \clearpage
+
+\mainmatter
+
+\chapter{Introduction}
+
+\appendix
+
+\chapter{Mathematical Tools}
+
+\backmatter
+
+\end{document}
