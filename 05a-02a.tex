@@ -1,2 +1,61 @@
 \section{Four-Potential of a Field}
+\label{sec:05a-02a}
 
+주어진 전자기장에서 운동하는 입자의 작용(action)은 자유 입자의 작용과 입자와 장의 상호작용을 기술하는 작용의 합이다. 후자의 경우 입자와 장의 특성을 나타내는 물리량을 포함할 것이라고 생각해볼 수 있다.
+
+실험에 따르면 전자기장과 상호작용하는 입자는 전하(charge, $q$)라는 하나의 특성을 갖고 있다. 전하는 상수이며 실숫값을 갖는다. 전자기장의 특성은 four-potential이라는 시공간 좌표에 대한 four-vector 함수로 나타난다. 이 물리량들은 작용에서 다음과 같은 항으로 쓰인다.
+\begin{equation*}
+    S_\textrm{int} = - q \int ^{x_f} _{x_i} \tensor{A}{_\mu} \tensor{dx}{^\mu}
+\end{equation*}
+여기서 $\tensor{x}{^\mu}$는 입자의 세계선 위에 있는 점을 나타낸다.
+
+따라서 전자기장 안의 입자의 작용은 다음과 같다.
+\begin{equation}
+    S = \int ^{x_f} _{x_i} \left( - m c ds - q \tensor{A}{_\mu} \tensor{dx}{^\mu} \right)
+\end{equation}
+
+Four-vector $\tensor{A}{^\mu}$의 시간 성분을 scalar potential이라 부르고 $A^0 = \phi / c$라고 쓰며 공간 성분을 vector potential이라 부르고 $\vb{A}$라 쓴다.
+\begin{equation}
+    \tensor{A}{^\mu} = \left( \frac{\phi}{c}, \vb{A} \right)
+\end{equation}
+따라서 작용을 다음과 같이 쓸 수 있다.
+\begin{equation*}
+    S = \int ^{x_f} _{x_i} \left( - m c ds - q \phi dt + q \vb{A} \cdot d\vb{r} \right)
+\end{equation*}
+$d\vb{r} / dt = \vb{v}$라 쓰면 $t$에 대한 적분으로 쓸 수 있다.
+\begin{equation}
+    S = \int ^{t_f} _{t_i} \left( - m c^2 \sqrt{1 - \frac{v^2}{c^2}} - q \phi dt + q \vb{A} \cdot \vb{v} \right) dt
+\end{equation}
+즉, 전자기장 안에서 전하의 Lagrangian은 다음과 같다.
+\begin{equation}\label{eq:ll1604}
+    L = - m c^2 \sqrt{1 - \frac{v^2}{c^2}} - q \phi dt + q \vb{A} \cdot \vb{v}
+\end{equation}
+
+입자의 canonical momentum은 다음과 같다.
+\begin{equation}\label{eq:ll1605}
+    \vb{P} = \pdv{L}{\vb{v}} = \frac{m \vb{v}}{\sqrt{1 - \frac{v^2}{c^2}}} + q \vb{A} = \vb{p} + q \vb{A}
+\end{equation}
+또한 Hamiltonian은 다음과 같다.
+\begin{equation}\label{eq:ll1606}
+    H = \vb{v} \cdot \pdv{L}{\vb{v}} - L = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} + q \phi
+\end{equation}
+그런데 Hamiltonian은 속도가 아닌 canonical momentum으로 표현해야 한다.
+\eqref{eq:ll1605}와 \eqref{eq:ll1606}로부터 $H - q \phi$와 $\vb{P} - q \vb{A}$는 장이 없을 때의 $H$와 $\vb{p}$의 관계와 같은 관계를 갖는 것을 알 수 있다.
+\begin{equation}
+    \left( \frac{H - q \phi}{c^2} \right) = m^2 c^2 + \left( \vb{P} - q \vb{A} \right)
+\end{equation}
+또는 다음과 같은 관계식을 얻는다.
+\begin{equation}
+    H = \sqrt{m^2 c^4 + c^2 \left( \vb{P} - q \vb{A} \right)^2} + q \phi
+\end{equation}
+
+속도가 충분히 작다면 (고전역학에서와 같이) \eqref{eq:ll1604}는 다음과 같이 근사할 수 있다.
+\begin{equation}
+    L = \frac{m v^2}{2} + q \vb{A} \cdot \vb{v} - q \phi
+\end{equation}
+이러한 근사로부터 다음이 성립한다.
+\begin{equation}
+    \vb{p} = m \vb{v} = \vb{P} - q \vb{A}
+    \qquad
+    H = \frac{1}{2 m} \left( \vb{P} - q \vb{A} \right)^2 + q \phi
+\end{equation}
