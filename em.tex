@@ -1,7 +1,8 @@
 \documentclass[
     ebook,
     11pt,
-    twoside,
+    % twoside,
+    oneside,
     onecolumn,
     openright,
     final
@@ -10,10 +11,14 @@
 
 \usepackage[]{geometry}
 % \usepackage[final]{microtype}
+\usepackage{indentfirst}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+
+\usepackage{physics}
+\usepackage{tensor}
 
 \usepackage{graphicx}
 
@@ -59,7 +64,6 @@
 \part{The Special Theory of Relativity}
 
 \chapter{The Principle of Relativity}
-% 
 
 \chapter{Physical Interpretation}
 
@@ -70,11 +74,13 @@
 % === Classical Electrodynamics ===
 \part{Fundamental Electrodynamics}
 
-\chapter{Charges in Electromagnetic Fields}
+\chapter[Charges in EM Fields]{Charges in Electromagnetic Fields}
+\input{05a-01a.tex}
+\input{05a-02a.tex}
 
-\chapter{The Electromagnetic Field Equations}
+\chapter[The EM Field Equations]{The Electromagnetic Field Equations}
 
-\chapter{Constant Electromagnetic Fields}
+\chapter[Constant EM Fields]{Constant Electromagnetic Fields}
 
 % === Electrodynamics of Continuous Media
 \part{Electrodynamics of Continuous Media}
