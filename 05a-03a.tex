@@ -1,3 +1,78 @@
 \section{Equations of Motion of a Charge in a Field}
 \label{sec:05a-03a}
 
+장에 있는 전하는 장에 의해 가해지는 힘의 영향을 받을 뿐만 아니라 장에 영향을 준다. 그러나 전하량이 크지 않으면 전하가 장에 작용하는 영향을 무시할 수 있다. 이 경우 주어진 장에서 전하의 움직임을 고려할 때 장이 전하의 위치나 속도에 의존하지 않는다고 가정할 수 있다. 좀 더 명확한 기준은 나중에 다룰 것이다. 일단은 이 조건이 충족되었다고 가정하고 진행하자.
+
+작용에 변분을 가하여 운동방정식을 얻자. 곧 다음의 Euler-Lagrange 방정식을 \eqref{eq:ll1604}에 사용하자.
+\begin{equation}
+    \pdv{L}{\vb{r}} - \dv{t} \pdv{L}{\vb{v}} = 0
+\end{equation}
+
+$\partial L / \partial \vb{v}$은 \eqref{eq:ll1605}와 같다. 그리고 다음을 얻는다.
+\begin{equation*}
+    \pdv{L}{\vb{r}} = \grad L = q \grad(\vb{A} \cdot \vb{v}) - q \grad \phi
+\end{equation*}
+다음과 같은 식을 vector calculus에서 배웠을 것이다.
+\begin{equation*}
+    \grad(\vb{a} \cdot \vb{b}) = (\vb{a} \cdot \grad) \vb{b} + (\vb{b} \cdot \grad) \vb{a} + \vb{b} \cross (\curl \vb{a}) + \vb{a} \times (\curl \vb{b})
+\end{equation*}
+이를 적용하면 다음을 얻는다. ($\vb{v}$는 상수로 취급한다!)
+\begin{equation*}
+    \pdv{L}{\vb{r}} = q (\vb{v} \cdot \grad) \vb{A} + q \vb{v} \times (\curl \vb{A}) - q \grad \phi
+\end{equation*}
+따라서 Lagrange 방정식은 다음과 같다.
+\begin{equation*}
+    \dv{t}(\vb{p} + q \vb{A}) = q (\vb{v} \cdot \grad) \vb{A} + q \vb{v} \times (\curl \vb{A}) - q \grad \phi
+\end{equation*}
+여기서 $d \vb{A}$는 전미분이므로 다음과 같다.
+\begin{equation*}
+    d \vb{A} = dt \pdv{\vb{A}}{t} + d\vb{r} \cdot \grad \vb{A} = dt (\pdv{\vb{A}}{t} + (\vb{v} \cdot \grad) \vb{A})
+\end{equation*}
+위의 식들을 모두 정리하면 다음이 성립한다.
+\begin{equation}
+    \dv{\vb{p}}{t} = - q \pdv{\vb{A}}{t} - q \grad \phi + q \vb{v} \cross (\curl \vb{A})
+\end{equation}
+
+이 방정식은 전자기장 안에서 운동하는 입자의 운동방정식이다. 좌변이 입자의 운동량을 시간으로 미분한 것이므로 우변은 전자기장 안에서 전하가 받는 힘이다. 이 힘은 입자의 속도에 의존하는 항과 의존하지 않는 항으로 나눌 수 있다.
+
+입자의 속도에 의존하지 않는 부분을 전기력이라 부르고 단위 전하 당 전기력을 전기장 세기(electric field intensity, $\vb{E}$)라 부른다.
+\begin{equation}\label{eq:ll1703}
+    \vb{E} = - \pdv{\vb{A}}{t} - \grad \phi
+\end{equation}
+
+입자의 속도에 의존하는 부분을 자기력이라 부르고 자기장 세기(magnetic field intensity)를 다음과 같이 정의한다.
+\begin{equation}\label{eq:ll1704}
+    \vb{B} = \curl \vb{A}
+\end{equation}
+
+결론적으로 전자기장 안에서의 전하의 운동방정식은 다음과 같이 쓸 수 있다.
+\begin{equation}\label{eq:ll1705}
+    \dv{\vb{p}}{t} = q \vb{E} + q \vb{v} \times \vb{B}
+\end{equation}
+이 식의 우변을 Lorentz 힘이라고 한다.
+
+전하의 속도가 광속보다 충분히 작다면 전하의 운동량 $\vb{p}$는 고전적인 경우와 같이 $m \vb{v}$이다. 그리고 운동방정식은 다음과 같다.
+\begin{equation}
+    m \dv{\vb{v}}{t} = q \vb{E} + q \vb{v} \times \vb{B}
+\end{equation}
+
+입자의 kinetic energy\footnote{정지 질량을 포함한다.} 변화는 앞에서 보았던 것 처럼 다음과 같다.
+\begin{equation*}
+    \dv{\mathcal{E}}{t}
+    = \dv{t} \left( \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \right)
+    = \vb{v} \cdot \dv{\vb{p}}{t}
+\end{equation*}
+이 식에 \eqref{eq:ll1705}를 대입하면 $\vb{v} \cdot ( \vb{v} \cross \vb{B} ) = 0$이므로 다음을 얻는다.
+\begin{equation}
+    \dv{\mathcal{E}}{t} = q \vb{E} \cdot \vb{v}
+\end{equation}
+이로부터 자기장은 전하에게 일을 하지 않는다는 것을 알 수 있다.
+
+역학에서 등장하는 모든 식들은 시간 반전 대칭(time reversal symmetry)을 갖고 있었다. 즉 시간이 흐르는 방향을 바꾸어도 운동방정식은 변하지 않는다. 이는 상대론의 전자기장에도 적용된다. 따라서 \eqref{eq:ll1705} 또한 시간 반전 대칭을 갖는다. 이를 통하여 다음과 같은 변환에 대해서 운동방정식이 변하지 않는다는 것을 알 수 있다.
+\begin{equation}
+    t \to -t \qquad \vb{E} \to \vb{E} \qquad \vb{B} \to - \vb{B}
+\end{equation}
+\eqref{eq:ll1703}와 \eqref{eq:ll1704}에 따라서 시간 반전 변환에 대하여 potential은 다음과 같이 변환한다.
+\begin{equation}
+    \phi \to \phi \qquad \vb{A} \to - \vb{A}
+\end{equation}

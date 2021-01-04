@@ -5,13 +5,13 @@
 
 실험에 따르면 전자기장과 상호작용하는 입자는 전하(charge, $q$)라는 하나의 특성을 갖고 있다. 전하는 상수이며 실숫값을 갖는다. 전자기장의 특성은 four-potential이라는 시공간 좌표에 대한 four-vector 함수로 나타난다. 이 물리량들은 작용에서 다음과 같은 항으로 쓰인다.
 \begin{equation*}
-    S_\textrm{int} = - q \int ^{x_f} _{x_i} \tensor{A}{_\mu} \tensor{dx}{^\mu}
+    S_\textrm{int} = - q \int ^{x_f} _{x_i} \tensor{A}{_\mu} \dd \tensor{x}{^\mu}
 \end{equation*}
 여기서 $\tensor{x}{^\mu}$는 입자의 세계선 위에 있는 점을 나타낸다.
 
 따라서 전자기장 안의 입자의 작용은 다음과 같다.
 \begin{equation}
-    S = \int ^{x_f} _{x_i} \left( - m c ds - q \tensor{A}{_\mu} \tensor{dx}{^\mu} \right)
+    S = \int ^{x_f} _{x_i} \left( - m c \dd s - q \tensor{A}{_\mu} \dd \tensor{x}{^\mu} \right)
 \end{equation}
 
 Four-vector $\tensor{A}{^\mu}$의 시간 성분을 scalar potential이라 부르고 $A^0 = \phi / c$라고 쓰며 공간 성분을 vector potential이라 부르고 $\vb{A}$라 쓴다.
@@ -20,15 +20,15 @@ Four-vector $\tensor{A}{^\mu}$의 시간 성분을 scalar potential이라 부르
 \end{equation}
 따라서 작용을 다음과 같이 쓸 수 있다.
 \begin{equation*}
-    S = \int ^{x_f} _{x_i} \left( - m c ds - q \phi dt + q \vb{A} \cdot d\vb{r} \right)
+    S = \int ^{x_f} _{x_i} \left( - m c \dd s - q \phi \dd t + q \vb{A} \cdot \dd \vb{r} \right)
 \end{equation*}
 $d\vb{r} / dt = \vb{v}$라 쓰면 $t$에 대한 적분으로 쓸 수 있다.
 \begin{equation}
-    S = \int ^{t_f} _{t_i} \left( - m c^2 \sqrt{1 - \frac{v^2}{c^2}} - q \phi dt + q \vb{A} \cdot \vb{v} \right) dt
+    S = \int ^{t_f} _{t_i} \left( - m c^2 \sqrt{1 - \frac{v^2}{c^2}} - q \phi + q \vb{A} \cdot \vb{v} \right) \dd t
 \end{equation}
 즉, 전자기장 안에서 전하의 Lagrangian은 다음과 같다.
 \begin{equation}\label{eq:ll1604}
-    L = - m c^2 \sqrt{1 - \frac{v^2}{c^2}} - q \phi dt + q \vb{A} \cdot \vb{v}
+    L = - m c^2 \sqrt{1 - \frac{v^2}{c^2}} - q \phi + q \vb{A} \cdot \vb{v}
 \end{equation}
 
 입자의 canonical momentum은 다음과 같다.
