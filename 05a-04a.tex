@@ -1,6 +1,15 @@
 \section{Gauge Invariance}
 \label{sec:05a-04a}
 
-고전역학에서 potential은 차이가 중요하여 임의의 상수를 더하거나 빼도 상관 없는 양이었다. 왜 four-potential이라는 이름의 의미를 알기 위해서 운동방정식 \eqref{eq:ll1705}를 먼저 관찰해보자. 운동방정식에서 전하의 운동에 영향을 미치는 것은 potential이 아니라 장의 세기인 $\vb{E}$와 $\vb{B}$임을 알 수 있다. 따라서 4-potential이 서로 같은 장에 대응된다면 물리적으로 동등하다.
+고전역학에서 potential은 차이가 중요하여 임의의 상수를 더하거나 빼도 상관 없는 양이었다. Four-potential이라는 이름의 의미를 알기 위해서 운동방정식 \eqref{eq:ll1705}를 먼저 관찰해보자. 운동방정식에서 전하의 운동에 영향을 미치는 것은 potential이 아니라 장의 세기인 $\vb{E}$와 $\vb{B}$임을 알 수 있다. 따라서 4-potential이 서로 같은 장에 대응된다면 물리적으로 동등하다.
 
-만약
+만약 potential $\phi$와 $\vb{A}$가 주어져 있다면 $\vb{E}$와 $\vb{B}$는 유일하게 결정된다. 그러나 하나의 전자기장에는 여러 potential이 대응된다. 이를 보이기 위해서 임의의 시공간 좌표에 대한 함수 $f$에 대하여 다음과 같은 변환을 생각해보자.
+\begin{equation}\label{eq:ll1801}
+    \tensor{A}{_\mu} \to \tensor{A}{_\mu} - \tensor{\partial}{_\mu} f
+\end{equation}
+이는 작용에 다음과 같은 항을 추가한다.
+\begin{equation}
+    q \; \dd \tensor{x}{^\mu} \; \tensor{\partial}{_\mu} f = d ( q f )
+\end{equation}
+그러나 이 항은 전미분이다. 따라서 운동방정식에 아무런 영향을 주지 않는다.
+
