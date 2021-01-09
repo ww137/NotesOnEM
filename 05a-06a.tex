@@ -1,0 +1,48 @@
+\section{Motion in a Constant Uniform Electric Field}
+\label{sec:05a-06a}
+
+전하량이 $q$인 전하가 균일한 전기장 $\vb{E}$ 안에서 운동하는 상황을 생각해보자. 장의 방향이 $x$축과 평행하다고 하자. 운동은 평면 위에서 이루어질 것이다. 이 평면이 $xy$ 평면이라고 하자.
+그러면 운동방정식 \eqref{eq:ll1705}은 다음과 같다.
+\begin{equation*}
+    \dot{p_x} = q E \qquad \dot{p_y} = 0
+\end{equation*}
+여기서 점은 시간 $t$에 대한 미분이다.
+$t = 0$일 때 $p_x = 0$이고 $p_0$가 초기 운동량이라 하자. 이 식을 적분하면 다음과 같다.
+\begin{equation}\label{eq:ll2001}
+    p_x = q E t \qquad p_y = p_0
+\end{equation}
+
+입자의 kinetic energy는 $T = \sqrt{m^2 c^4 + p^2 c^2}$이므로 \eqref{eq:ll2001}로 치환하고 $T_0$이 $t = 0$일때의 kinetic energy라고 한다면 다음을 얻는다.
+\begin{equation}\label{eq:ll2002}
+    T = \sqrt{m^2 c^4 + c^2 p_0^2 + (c q E t)^2} = \sqrt{T_0^2 + (c q E t)^2}
+\end{equation}
+
+입자의 속도는 $\vb{v} = \vb{p} c^2 / T$이므로 다음을 얻는다.
+\begin{equation*}
+    \dv{x}{t} = \frac{p_x c^2}{T} = \frac{c^2 q E t}{\sqrt{T_0^2 + (q e E t)^2}}
+\end{equation*}
+간단한 꼴을 얻기 위해서 적분 상수를 $0$이라 하고 적분하면 입자의 $x$ 좌표를 알 수 있다.
+\begin{equation}\label{eq:ll2003}
+    x = \frac{\sqrt{T_0^2 + (c q E t)^2}}{q E}
+\end{equation}
+
+$y$ 좌표를 알아내기 위하여 다음을 적분한다.
+\begin{equation*}
+    \dv{y}{t} = \frac{p_y c^2}{T} = \frac{p_0 c^2}{\sqrt{T_0^2 + (q e E t)^2}}
+\end{equation*}
+그 결과 다음을 얻는다.
+\begin{equation}\label{eq:ll2004}
+    y = \frac{p_0 c}{q E} \sinh^{-1} \left( \frac{c q E t}{T_0} \right)
+\end{equation}
+
+\eqref{eq:ll2004}를 $t$에 대하여 풀어서 \eqref{eq:ll2003}에 대입하면 다음을 얻는다.
+\begin{equation}\label{eq:ll2005}
+    x = \frac{T_0}{q E} \cosh \frac{q E y}{p_0 c}
+\end{equation}
+이로부터 균일한 전기장 안의 입자는 현수선을 따라서 운동함을 알 수 있다.
+
+만약 입자의 속도가 충분히 작다면 $v \ll c$을 만족하고 $ p_0 = m v_0 $, $ T_0 = m c^2$라고 둘 수 있다. 이제 \eqref{eq:ll2005}을 급수 전개하고 고차항을 무시하면 다음을 얻는다.
+\begin{equation*}
+    x = \frac{q E}{2 m v_0^2} y^2 + C
+\end{equation*}
+이 식은 포물선의 방정식이다. 이 결과는 고전역학의 결과와 같다.
